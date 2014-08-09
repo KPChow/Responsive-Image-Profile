@@ -1,0 +1,157 @@
+body,html,div {
+     margin: 0;
+     padding:0;
+ }
+ 
+html {
+	font-size: 62.5%;
+	color: #000000;
+}
+
+body {
+	font-size: 1.4em;
+	font-family: arial, sans-serif;
+}
+
+.clear { 
+	clear: both; 
+}
+
+
+/* Image Profile
+---------------------------------------*/
+.profile {
+	width: 25%;
+	background-color: #666666;
+	float: left;
+	position: relative;
+}
+	
+	.profile a.openDescription { 
+		cursor: default; 
+	}
+	
+	.profile img.profilePicture {
+		display: block;
+		-webkit-transition: all .25s ease-in-out 0s;
+		-moz-transition: all .25s ease-in-out 0s;
+		-ms-transition: all .25s ease-in-out 0s;
+		-o-transition: all .25s ease-in-out 0s;
+		transition: all .25s ease-in-out 0s;	
+	}
+	
+	.profile .profileDescription {
+		-webkit-transition: all .5s ease-in-out 0s;
+		-moz-transition: all .5s ease-in-out 0s;
+		-ms-transition: all .5s ease-in-out 0s;
+		-o-transition: all .5s ease-in-out 0s;
+		transition: all .5s ease-in-out 0s;
+	}
+
+	.profile a.openDescription img {
+		padding-bottom: 0;
+		max-width: 100%;
+	}
+
+	.no-touch .profile:hover img.profilePicture {
+		opacity: 0.2;
+		filter:Alpha(opacity=20); 
+	}
+
+	.no-touch .profile:hover .profileDescription {
+		display: block;
+	}
+
+	.profileDescription {
+		display: none;
+		position: absolute;
+		top: 50%;
+		margin-top: -90px;
+		width: 100%;
+		text-align: center;
+	}
+
+	.openProfileContent { cursor: pointer; }
+	
+	.openProfileContent .expandProfile-tablet { display: none; }
+	
+
+/* Profile Description
+---------------------------------------*/
+.moduleProfileContents { 
+	display: none; 
+	margin: 0 2%;	
+}
+
+	.profileDescription .name, .profileContent .name { 
+		font-size: 2.25em; 
+		color: #ff6a00; 
+		padding-bottom: 0; 
+		margin-top: 0;
+		line-height: normal; 
+	}
+	
+	.profileDescription .jobtitle, .profileContent .jobtitle { 
+		font-size: 1.5em; 
+	}
+	
+	.profileContent .quote { 
+		border-top: 1px solid #bfbfbf;  
+		border-bottom: 1px solid #bfbfbf; 
+		padding: 20px 0; 
+		margin-bottom: 20px;
+	}
+	
+	.profileContent .quote .lead { 
+		color: #DDDDDD;
+		font-style: italic;
+		font-size: 2em;
+	}
+
+	.profileDescription .name, .profileDescription .jobtitle { color: #FFFFFF; } 
+
+	a.closeProfile { 
+		float: right; 
+		margin-top: 20px; 
+	}
+	
+	a.closeProfile .mobile { display: none; }
+	
+
+
+/* Media Queries
+---------------------------------------*/
+@media screen and (min-width: 901px) {
+	.leftCol, rightCol {
+		width: 44%;
+		margin: 0 3%;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+	.profile { 
+	    width: 50%; 
+	}
+	
+	.leftCol, rightCol {
+		width: 44%;
+		margin: 0 3%;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 100px) and (max-width: 599px) {
+	.profile { 
+	    width: 100%; 
+	}
+	
+	.moduleProfileContents { 
+		display: none; 
+		margin: 0 4%;	
+	}
+	
+	a.closeProfile .desktop { display: none; }
+	a.closeProfile .mobile { display: block; }
+}
+
